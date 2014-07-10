@@ -1,0 +1,45 @@
+.navbar-inner {
+    background-image: linear-gradient(to bottom, #333, #eee);
+}
+
+.box-container .header {
+    height: 2.5em;
+    line-height: 2.5em;
+    color: white;
+    background-image: linear-gradient(to bottom, #333, #eee);
+    text-align: center;
+}
+
+.navbar .nav > li {
+    > a {
+        color: white;
+        text-shadow: 1px 1px 1px #333;
+    }
+
+    &.active {
+        > a {
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            background-image: linear-gradient(to top, #333, #faf)
+        }
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.serverstatus > .status.offline {
+    animation-timing-function: steps(2, end);
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    color: green;
+    text-shadow: 0px 0px 10px green;
+}
