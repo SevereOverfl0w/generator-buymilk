@@ -25,6 +25,4 @@ gulp.task('serve', $.serve({
     port: 9000
 }));
 
-gulp.task('livereload', $.livereload)
-
-gulp.task('default', ['styles', 'copy', 'serve', 'livereload']);
+gulp.task('default', ['styles', 'copy', 'serve']);
