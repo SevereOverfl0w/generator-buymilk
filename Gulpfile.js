@@ -12,12 +12,6 @@ var gulp = require('gulp'),
     };
 
 
-gulp.task('copy', function() {
-    gulp.src('app/**/*.html')
-        .pipe($.watch())
-        .pipe(gulp.dest('./dist'))
-});
-
 gulp.task('sass', function() {
     return gulp.src(config.sass)
                .pipe($.plumber())
@@ -40,4 +34,4 @@ gulp.task('watch', function() {
     $.watch({glob: config.sass, name: 'Sass'}, ['sass']);
 });
 
-gulp.task('default', ['sass', 'copy', 'watch', 'browser-sync']);
+gulp.task('default', ['sass', 'watch', 'browser-sync']);
