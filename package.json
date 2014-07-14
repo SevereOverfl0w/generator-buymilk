@@ -4,13 +4,15 @@
   "description": "A gulp script for easier buycraft theme development",
   "main": "Gulpfile.js",
   "devDependencies": {
+    "browser-sync": "^1.2.1",
     "gulp": "^3.8.6",
     "gulp-autoprefixer": "^0.0.8",
-    "gulp-load-plugins": "^0.5.3",
-    "gulp-sass": "^0.7.2",
     "gulp-embedlr": "^0.5.2",
     "gulp-livereload": "^2.1.0",
+    "gulp-load-plugins": "^0.5.3",
     "gulp-minify-css": "^0.3.6",
+    "gulp-plumber": "^0.6.3",
+    "gulp-sass": "^0.7.2",
     "gulp-serve": "^0.2.0",
     "gulp-watch": "^0.6.8"
   },
