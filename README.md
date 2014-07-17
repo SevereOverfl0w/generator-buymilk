@@ -1,8 +1,7 @@
-gulp-octo-buycraft
+Generator BuyMilk
 ==================
 
-A gulp script for aiding Buycraft theme development.
-
+A Yeoman Generator for a Gulp script, which is targetted at BuyCraft theme development.
 ## Note
 Does not include any HTML files (required) at this time, whilst I wait upon an
 official statement from Buycraft on the legality of me including local copies
