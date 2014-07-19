@@ -33,7 +33,11 @@ var BuymilkGenerator = yeoman.generators.Base.extend({
     }];
 
     this.prompt(prompts, function (props) {
-      this.store_url = url.parse(props.store_url);
+      try {
+        this.store_url = url.parse(props.store_url);
+      } catch(e) {
+          done(e);
+      }
 
       done();
     }.bind(this));
