@@ -61,15 +61,12 @@ var BuymilkGenerator = yeoman.generators.Base.extend({
     this.template('_package.json', 'package.json');
     this.template('_Gulpfile.js', 'Gulpfile.js');
     this.copy('_bower.json', 'bower.json');
+    this.copy('main.less', 'app/styles/main.less');
   },
 
   projectfiles: function () {
     this.copy('editorconfig', '.editorconfig');
   },
-
-  method3: function() {
-    console.log('This is a deep deep test');
-  }
 });
 
 module.exports = BuymilkGenerator;

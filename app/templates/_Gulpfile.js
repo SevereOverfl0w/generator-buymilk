@@ -8,16 +8,16 @@ var gulp = require('gulp'),
         app: 'app',
         dist: 'dist',
         // globs
-        sass: 'app/**/*.scss',
+        css: 'app/**/*.less',
     };
 
 
-gulp.task('sass', function() {
-    return gulp.src(config.sass)
+gulp.task('css', function() {
+    return gulp.src(config.css)
                .pipe($.plumber())
-               .pipe($.sass())
+               .pipe($.less())
                .pipe($.autoprefixer())
-               /*.pipe($.minifyCss())*/
+               .pipe($.minifyCss())
                .pipe(gulp.dest(config.tmp))
                .pipe(reload({stream: true}));
 });
@@ -31,7 +31,9 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', function() {
-    $.watch({glob: config.sass, name: 'Sass'}, ['sass']);
+  return $.watch(config.css, function(files, cb){
+    gulp.start('css', cb);
+  });
 });
 
-gulp.task('default', ['sass', 'watch', 'browser-sync']);
+gulp.task('default', ['css', 'watch', 'browser-sync']);

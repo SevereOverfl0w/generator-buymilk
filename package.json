@@ -1,7 +1,7 @@
 {
   "name": "generator-buymilk",
-  "version": "0.0.2",
-  "description": "Yeoman generator",
+  "version": "1.0.0",
+  "description": "Yeoman generator for Buycraft",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "SevereOverfl0w/generator-buymilk",
